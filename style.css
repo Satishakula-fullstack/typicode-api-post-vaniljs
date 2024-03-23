@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: ceneter;
+  flex-direction: column;
+}
+.add-post {
+  width: 1200px;
+}
+input {
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.post-title {
+  width: 23%;
+}
+.post-body {
+  width: 60%;
+}
+.btn-post {
+  background-color: salmon;
+  color: #ffff;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: tarnsform 0.2s ease;
+  font-weight: bold;
+}
+.btn-post:active {
+  transform: scale(1.1);
+}
+.container {
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 250px;
+  height: 300px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  transition: all 0.5s;
+}
+/* .card:hover {
+  transform: scale(1.02);
+} */
+.card:hover .close {
+  background-color: #000;
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+.close {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  top: -12px;
+  right: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  border-radius: 50%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.close::before,
+.close::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 16px;
+  background-color: #000;
+  cursor: pointer;
+}
+.close::before {
+  transform: rotate(45deg);
+}
+.close::after {
+  transform: rotate(-45deg);
+}
+.close:hover {
+  opacity: 1;
+}
+.card:hover .close::before,
+.card:hover .close::after {
+  background-color: #fff;
+}
